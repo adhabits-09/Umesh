@@ -8,7 +8,7 @@
     <!-- SEO -->
     <meta name="description" content="Join 1000+ Students, Housewives and Job Professionals who have Successfully built their income online with Umesh Dey. Start today!">
     <meta property="og:image" content="https://i.ibb.co/tTDGTv5D">
-    <meta name="theme-color" content="#0f766e">
+    <meta name="theme-color" content="#000000">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,29 +38,30 @@
 
     <style>
         :root {
-            --lightest: #f0fdfa;
-            --light:    #99f6e4;
-            --primary:  #0f766e;
-            --darkest:  #134e4a;
-            --white:    #FFFFFF;
-            --shadow: 0 6px 20px rgba(15, 118, 110, .15);
-            --shadow-hover: 0 10px 30px rgba(15, 118, 110, .25);
-            --glow: 0 0 25px rgba(153, 246, 228, .5);
-            --glow-intense: 0 0 40px rgba(153, 246, 228, .7);
+            --white: #FFFFFF;
+            --black: #000000;
+            --gold: #FFD700;
+            --gold-dark: #D4AF37;
+            --gray-light: #F5F5F5;
+            --gray-dark: #1A1A1A;
+            --shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            --shadow-hover: 0 10px 30px rgba(0, 0, 0, 0.15);
+            --glow-gold: 0 0 25px rgba(255, 215, 0, 0.4);
+            --glow-intense: 0 0 40px rgba(255, 215, 0, 0.6);
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
             font-family: 'Inter', sans-serif;
-            background: var(--lightest);
-            color: var(--darkest);
+            background: var(--white);
+            color: var(--black);
             line-height: 1.6;
             overflow-x: hidden;
         }
 
         @keyframes pulseGlow {
-            0%,100%{box-shadow:0 0 20px rgba(153, 246, 228,.4);}
-            50%{box-shadow:0 0 40px rgba(153, 246, 228,.8);}
+            0%,100%{box-shadow:0 0 20px rgba(255, 215, 0,.4);}
+            50%{box-shadow:0 0 40px rgba(255, 215, 0,.8);}
         }
         .glow-pulse { animation: pulseGlow 2.5s infinite; }
 
@@ -75,61 +76,46 @@
         }
         .shine-effect:hover::before{opacity:1;}
 
-        .stats-white{
-            background:var(--white)!important;
-            color:var(--darkest)!important;
-            border:1px solid var(--light);
-        }
-
-        .glow-border{
-            border:2px solid transparent;
-            background:linear-gradient(var(--white),var(--white)) padding-box,
-                       linear-gradient(135deg,var(--primary),var(--light)) border-box;
-            transition:all .4s;
-        }
-        .glow-border:hover{box-shadow:0 0 25px rgba(15, 118, 110,.4);transform:translateY(-3px);}
-
         .wa-btn{
-            background:linear-gradient(135deg,var(--primary),#115e59);
-            color:var(--white);
+            background:linear-gradient(135deg,var(--gold),var(--gold-dark));
+            color:var(--black);
             padding:.85rem 1.8rem;border-radius:50px;font-weight:800;border:none;
             display:inline-flex;align-items:center;gap:.5rem;
-            box-shadow:0 8px 20px rgba(15, 118, 110,.3);
+            box-shadow:0 8px 20px rgba(255, 215, 0, 0.3);
             cursor:pointer;transition:all .3s;text-decoration:none;font-size:1rem;white-space:nowrap;
             position:relative;overflow:hidden;
         }
         .wa-btn:hover{
             transform:translateY(-3px) scale(1.03);
-            box-shadow:var(--glow-intense),0 15px 30px rgba(15, 118, 110,.4);
-            color: white;
+            box-shadow:var(--glow-intense),0 15px 30px rgba(255, 215, 0, 0.4);
+            color: var(--black);
         }
         .wa-btn:active{transform:translateY(0) scale(.98);}
 
         section{padding:50px 0;position:relative;}
         .hero-section{
-            background: linear-gradient(135deg, var(--lightest), #ccfbf1);
+            background: linear-gradient(135deg, var(--gray-light), var(--white));
             padding:70px 0 50px;overflow:hidden;
         }
         .badge-custom{
-            background:linear-gradient(135deg,var(--primary),var(--darkest));
-            color:var(--white);padding:.6rem 1.5rem;border-radius:50px;font-weight:700;font-size:.875rem;
-            display:inline-block;margin-bottom:1rem;box-shadow:var(--shadow);
+            background:linear-gradient(135deg,var(--black),var(--gray-dark));
+            color:var(--gold);padding:.6rem 1.5rem;border-radius:50px;font-weight:700;font-size:.875rem;
+            display:inline-block;margin-bottom:1rem;box-shadow:var(--shadow);border:2px solid var(--gold);
         }
         
         .gradient-text{
-            background:linear-gradient(135deg,var(--primary),#042f2e);
+            background:linear-gradient(135deg,var(--black),var(--gray-dark));
             -webkit-background-clip:text;-webkit-text-fill-color:transparent;
             font-weight:800;
-            font-family: 'Inter', sans-serif;
         }
         
-        .hero-text-compact{max-width:700px;margin:0 auto 1.5rem;font-size:1.125rem;line-height:1.5;color:var(--darkest);}
+        .hero-text-compact{max-width:700px;margin:0 auto 1.5rem;font-size:1.125rem;line-height:1.5;color:var(--gray-dark);}
         .stat-card{
             background: var(--white); padding:1.25rem;border-radius:12px;box-shadow:var(--shadow);
-            text-align:center;transition:all .3s;height:100%;
+            text-align:center;transition:all .3s;height:100%;border:2px solid var(--gold);
         }
         .stat-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-hover);}
-        .counter{font-size:2rem;font-weight:800;color:var(--primary);}
+        .counter{font-size:2rem;font-weight:800;color:var(--black);}
 
         .video-container {
             position: relative;
@@ -138,7 +124,7 @@
             overflow: hidden;
             border-radius: 20px;
             box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-            border: 4px solid white;
+            border: 4px solid var(--gold);
             background: #000;
         }
         .video-container iframe {
@@ -156,7 +142,7 @@
             border-radius: 20px;
             overflow: hidden;
             box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-            border: 4px solid white;
+            border: 4px solid var(--gold);
         }
         .mentor-image {
             width: 100%;
@@ -168,27 +154,28 @@
         .feedback-viewport {
             overflow-x: auto; overflow-y: hidden; margin: 1.5rem 0; padding-bottom: 15px;
             scroll-behavior: smooth; -webkit-overflow-scrolling: touch;
-            scrollbar-width: thin; scrollbar-color: var(--primary) var(--lightest);
+            scrollbar-width: thin; scrollbar-color: var(--gold) var(--gray-light);
         }
         .feedback-viewport::-webkit-scrollbar { height: 8px; }
-        .feedback-viewport::-webkit-scrollbar-track { background: var(--lightest); border-radius: 4px; }
-        .feedback-viewport::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 4px; }
+        .feedback-viewport::-webkit-scrollbar-track { background: var(--gray-light); border-radius: 4px; }
+        .feedback-viewport::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 4px; }
 
         .feedback-track { display: flex; gap: 20px; width: max-content; }
         .feedback-item {
             flex-shrink: 0; width: 280px; height: 500px; border-radius: 15px; overflow: hidden;
             box-shadow: var(--shadow); background: #000; position: relative; transition: transform 0.3s ease;
+            border: 2px solid var(--gold);
         }
         .feedback-item:hover { transform: scale(1.02); box-shadow: var(--shadow-hover); }
         .feedback-item iframe { width: 100%; height: 100%; border: none; }
 
         .scroll-arrow {
             position: absolute; top: 50%; transform: translateY(-50%); width: 45px; height: 45px;
-            background: var(--white); border: 2px solid var(--primary); border-radius: 50%;
+            background: var(--white); border: 2px solid var(--gold); border-radius: 50%;
             display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 10;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15); transition: all 0.3s ease; color: var(--primary);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15); transition: all 0.3s ease; color: var(--black);
         }
-        .scroll-arrow:hover { background: var(--primary); color: var(--white); transform: translateY(-50%) scale(1.1); }
+        .scroll-arrow:hover { background: var(--gold); color: var(--black); transform: translateY(-50%) scale(1.1); }
         .scroll-arrow.prev { left: 0; }
         .scroll-arrow.next { right: 0; }
         .scroll-arrow.hidden { display: none; }
@@ -199,38 +186,41 @@
             .feedback-item { width: 260px; height: 460px; }
         }
 
-        .step-card{background: var(--white); border-radius:15px;padding:1.5rem;box-shadow:var(--shadow);transition:all .4s;height:100%;}
+        .step-card{background: var(--white); border-radius:15px;padding:1.5rem;box-shadow:var(--shadow);transition:all .4s;height:100%;border:2px solid var(--gold);}
         .step-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-hover);}
-        .step-number{width:50px;height:50px;background:linear-gradient(135deg,var(--primary),var(--darkest));color:var(--white);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.3rem;flex-shrink:0;}
+        .step-number{width:50px;height:50px;background:linear-gradient(135deg,var(--black),var(--gray-dark));color:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.3rem;flex-shrink:0;border:2px solid var(--gold);}
 
-        .accordion-item{border:none;border-radius:10px !important;margin-bottom:.75rem;box-shadow:var(--shadow);}
-        .accordion-button{background: var(--white); color:var(--darkest);font-weight:600;padding:1rem;}
-        .accordion-button:not(.collapsed){background:linear-gradient(135deg,var(--lightest),var(--white));color:var(--primary);}
-        .accordion-body{color:var(--darkest);}
+        .accordion-item{border:none;border-radius:10px !important;margin-bottom:.75rem;box-shadow:var(--shadow);border:2px solid var(--gold);}
+        .accordion-button{background: var(--white); color:var(--black);font-weight:600;padding:1rem;}
+        .accordion-button:not(.collapsed){background:linear-gradient(135deg,var(--gray-light),var(--white));color:var(--black);}
+        .accordion-body{color:var(--gray-dark);}
 
         /* Privacy Modal */
-        .pp-overlay-new{position:fixed;inset:0;background:rgba(19, 78, 74,.75);backdrop-filter:blur(4px);z-index:10001;opacity:0;visibility:hidden;transition:opacity .3s ease}
+        .pp-overlay-new{position:fixed;inset:0;background:rgba(0,0,0,.85);backdrop-filter:blur(4px);z-index:10001;opacity:0;visibility:hidden;transition:opacity .3s ease}
         .pp-overlay-new.show{opacity:1;visibility:visible}
-        .pp-modal-new{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%) scale(.95);width:90%;max-width:560px;max-height:86vh;background:#fff;border-radius:16px;box-shadow:0 20px 40px rgba(15, 118, 110,.25);display:flex;flex-direction:column;opacity:0;visibility:hidden;transition:all .3s ease}
+        .pp-modal-new{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%) scale(.95);width:90%;max-width:560px;max-height:86vh;background:var(--white);border-radius:16px;box-shadow:0 20px 40px rgba(0,0,0,.25);display:flex;flex-direction:column;opacity:0;visibility:hidden;transition:all .3s ease;border:2px solid var(--gold);}
         .pp-overlay-new.show .pp-modal-new{opacity:1;visibility:visible;transform:translate(-50%,-50%) scale(1)}
-        .pp-header-new{display:flex;align-items:center;justify-content:space-between;padding:1.25rem 1.5rem;border-bottom:1px solid #ccfbf1;flex-shrink:0}
-        .pp-title-new{font-size:1.25rem;font-weight:700;color:#0f766e}
-        .pp-close-new{background:none;border:none;font-size:1.5rem;color:#99f6e4;cursor:pointer;transition:color .2s}
-        .pp-close-new:hover{color:#0f766e}
-        .pp-body-new{padding:1.5rem;overflow-y:auto;font-size:.95rem;line-height:1.6}
-        .pp-body-new h3{font-size:1rem;font-weight:600;margin:1rem 0 .5rem;color:#0f766e}
+        .pp-header-new{display:flex;align-items:center;justify-content:space-between;padding:1.25rem 1.5rem;border-bottom:2px solid var(--gold);flex-shrink:0;background:var(--black);}
+        .pp-title-new{font-size:1.25rem;font-weight:700;color:var(--gold)}
+        .pp-close-new{background:none;border:none;font-size:1.5rem;color:var(--gold);cursor:pointer;transition:color .2s}
+        .pp-close-new:hover{color:var(--white)}
+        .pp-body-new{padding:1.5rem;overflow-y:auto;font-size:.95rem;line-height:1.6;color:var(--black);}
+        .pp-body-new h3{font-size:1rem;font-weight:600;margin:1rem 0 .5rem;color:var(--black);}
         .pp-body-new h3:first-child{margin-top:0}
         .pp-body-new p{margin-bottom:.75rem}
-        .pp-footer-new{margin-top:1rem;font-size:.85rem;font-weight:600;text-align:center;color:#0f766e}
+        .pp-footer-new{margin-top:1rem;font-size:.85rem;font-weight:600;text-align:center;color:var(--gray-dark);}
 
         /* FORM POPUP STYLES */
-        .form-backdrop{position:fixed;inset:0;background:rgba(19, 78, 74,.8);backdrop-filter:blur(8px);z-index:9999;opacity:0;visibility:hidden;transition:all .4s ease}
+        .form-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.85);backdrop-filter:blur(8px);z-index:9999;opacity:0;visibility:hidden;transition:all .4s ease}
         .form-backdrop.show{opacity:1;visibility:visible}
         #formContainer{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%) scale(.9);z-index:10000;max-width:500px;width:90%;max-height:85vh;opacity:0;visibility:hidden;transition:all .4s ease}
         #formContainer.show{opacity:1;visibility:visible;transform:translate(-50%,-50%) scale(1)}
-        .form-card{box-shadow:0 0 40px rgba(15,118,110,.3);border:2px solid var(--primary);border-radius:15px;background:white;}
-        .form-control,.form-select{border:2px solid var(--light);border-radius:8px;padding:.6rem .9rem;transition:all .3s ease}
-        .form-control:focus,.form-select:focus{border-color:var(--primary);box-shadow:0 0 0 4px rgba(15,118,110,.15)}
+        .form-card{box-shadow:0 0 40px rgba(255,215,0,.3);border:2px solid var(--gold);border-radius:15px;background:var(--white);}
+        .form-control,.form-select{border:2px solid var(--gray-light);border-radius:8px;padding:.6rem .9rem;transition:all .3s ease}
+        .form-control:focus,.form-select:focus{border-color:var(--gold);box-shadow:0 0 0 4px rgba(255,215,0,.15)}
+
+        .section-title{color:var(--black);font-weight:800;}
+        .gold-text{color:var(--gold-dark);font-weight:700;}
 
         @media(max-width:768px){
             section{padding:40px 0;}
@@ -253,26 +243,26 @@
         <div class="card-body p-4 position-relative">
             <button id="closeFormBtn" class="btn-close position-absolute top-0 end-0 m-3" aria-label="Close"></button>
             <div class="text-center mb-4">
-                <h2 class="h4 fw-bold mb-1" style="color:var(--primary);">🚀 Start Your Journey</h2>
+                <h2 class="h4 fw-bold mb-1" style="color:var(--black);">🚀 Start Your Journey</h2>
                 <p class="text-muted small">Fill details to get started</p>
             </div>
             <form id="mainForm" novalidate>
                 <input type="hidden" id="sourceInfo" name="sourceInfo">
                 <div class="row g-2">
                     <div class="col-12">
-                        <label class="form-label d-flex align-items-center gap-2">
+                        <label class="form-label d-flex align-items-center gap-2 fw-bold">
                             <i data-lucide="user" style="width:16px"></i> Full Name *
                         </label>
                         <input id="inp_name" type="text" class="form-control" required placeholder="Your full name">
                     </div>
                     <div class="col-6">
-                        <label class="form-label d-flex align-items-center gap-2">
+                        <label class="form-label d-flex align-items-center gap-2 fw-bold">
                             <i data-lucide="calendar" style="width:16px"></i> Age *
                         </label>
                         <input id="inp_age" type="number" class="form-control" required placeholder="Age" min="15" max="65">
                     </div>
                     <div class="col-6">
-                        <label class="form-label d-flex align-items-center gap-2">
+                        <label class="form-label d-flex align-items-center gap-2 fw-bold">
                             <i data-lucide="users" style="width:16px"></i> Gender *
                         </label>
                         <select id="inp_gender" class="form-select" required>
@@ -283,7 +273,7 @@
                         </select>
                     </div>
                     <div class="col-12">
-                        <label class="form-label d-flex align-items-center gap-2">
+                        <label class="form-label d-flex align-items-center gap-2 fw-bold">
                             <i data-lucide="briefcase" style="width:16px"></i> Profession *
                         </label>
                         <select id="inp_profession" class="form-select" required>
@@ -333,12 +323,12 @@
         <h1 class="display-3 fw-bold gradient-text mb-3">
             Join Over <span class="counter" data-target="1000" data-suffix="+">0</span> Students, Housewife & Job Professionals
         </h1>
-        <p class="hero-text-compact">Who have Successfully built their income online with Umesh Dey</p>
+        <p class="hero-text-compact">Who have Successfully built their income online with <span class="gold-text">Umesh Dey</span></p>
     </div>
 </section>
 
 <!-- About / Video Section -->
-<section class="py-5" style="background: var(--lightest);">
+<section class="py-5" style="background: var(--white);">
     <div class="container">
         <div class="row g-5 align-items-center">
             <div class="col-lg-6">
@@ -354,15 +344,15 @@
             </div>
             <div class="col-lg-6">
                 <div class="badge-custom mb-2">💫 Your Mentor</div>
-                <h2 class="display-5 fw-bold mb-3">Hi, I'm Umesh Dey</h2>
+                <h2 class="display-5 fw-bold mb-3 section-title">Hi, I'm <span class="gold-text">Umesh Dey</span></h2>
                 
                 <!-- MENTOR IMAGE -->
                 <div class="mentor-image-container shine-effect mb-4">
-                    <img src="https://i.ibb.co/tTDGTv5D" alt="Umesh Dey - Your Mentor" class="mentor-image" onerror="this.src='https://via.placeholder.com/600x400/0f766e/ffffff?text=Umesh+Dey'">
+                    <img src="https://i.ibb.co/tTDGTv5D" alt="Umesh Dey - Your Mentor" class="mentor-image" onerror="this.src='https://via.placeholder.com/600x400/000000/FFD700?text=Umesh+Dey'">
                 </div>
 
-                <div class="p-3 rounded-3 mb-4 glow-border" style="background: var(--white);">
-                    <h3 class="h5 fw-bold mb-2" style="color:var(--primary);">🎯 Mission:</h3>
+                <div class="p-3 rounded-3 mb-4" style="background: var(--gray-light); border:2px solid var(--gold);">
+                    <h3 class="h5 fw-bold mb-2" style="color:var(--black);">🎯 Mission:</h3>
                     <p class="fs-5 fw-semibold mb-0">Build a Genuine Online Income From Home - No Experience Needed</p>
                 </div>
 
@@ -392,9 +382,9 @@
 </section>
 
 <!-- Feedback Section -->
-<section class="py-5" style="background: var(--white);">
+<section class="py-5" style="background: var(--gray-light);">
     <div class="container">
-        <h2 class="text-center display-5 fw-bold mb-3" style="color:var(--primary);">✨ Real Success Stories</h2>
+        <h2 class="text-center display-5 fw-bold mb-3 section-title">✨ Real Success Stories</h2>
         <p class="text-center text-muted mb-4">Drag or use arrows to explore student testimonials</p>
         
         <div class="feedback-wrapper">
@@ -437,16 +427,16 @@
 </section>
 
 <!-- Steps Section -->
-<section class="py-5" style="background: var(--lightest);">
+<section class="py-5" style="background: var(--white);">
     <div class="container">
-        <h2 class="text-center display-5 fw-bold mb-4" style="color:var(--primary);">What Happens When You Join?</h2>
+        <h2 class="text-center display-5 fw-bold mb-4 section-title">What Happens When You Join?</h2>
         <div class="row g-3">
             <div class="col-md-6 col-lg-3">
                 <div class="step-card shine-effect">
                     <div class="d-flex align-items-start gap-3">
                         <div class="step-number">1</div>
                         <div>
-                            <h3 class="h5 fw-bold mb-2" style="color:var(--primary);">Instant Connection</h3>
+                            <h3 class="h5 fw-bold mb-2" style="color:var(--black);">Instant Connection</h3>
                             <p>Direct WhatsApp access to me</p>
                         </div>
                     </div>
@@ -457,7 +447,7 @@
                     <div class="d-flex align-items-start gap-3">
                         <div class="step-number">2</div>
                         <div>
-                            <h3 class="h5 fw-bold mb-2" style="color:var(--primary);">Complete Access</h3>
+                            <h3 class="h5 fw-bold mb-2" style="color:var(--black);">Complete Access</h3>
                             <p>Proven step-by-step training system</p>
                         </div>
                     </div>
@@ -468,7 +458,7 @@
                     <div class="d-flex align-items-start gap-3">
                         <div class="step-number">3</div>
                         <div>
-                            <h3 class="h5 fw-bold mb-2" style="color:var(--primary);">Daily Mentorship</h3>
+                            <h3 class="h5 fw-bold mb-2" style="color:var(--black);">Daily Mentorship</h3>
                             <p>24/7 support & community access</p>
                         </div>
                     </div>
@@ -479,7 +469,7 @@
                     <div class="d-flex align-items-start gap-3">
                         <div class="step-number">4</div>
                         <div>
-                            <h3 class="h5 fw-bold mb-2" style="color:var(--primary);">Start Earning</h3>
+                            <h3 class="h5 fw-bold mb-2" style="color:var(--black);">Start Earning</h3>
                             <p>Begin from Week 1 confidently</p>
                         </div>
                     </div>
@@ -493,20 +483,20 @@
 </section>
 
 <!-- Stats Section -->
-<section class="py-5" style="background: linear-gradient(135deg,var(--lightest),var(--white));">
+<section class="py-5" style="background: linear-gradient(135deg,var(--gray-light),var(--white));">
     <div class="container">
-        <h2 class="text-center display-5 fw-bold mb-4" style="color:var(--primary);">Know Your Coach</h2>
+        <h2 class="text-center display-5 fw-bold mb-4 section-title">Know Your Coach</h2>
         <div class="row g-3 align-items-center">
             <div class="col-md-6">
-                <div class="stats-white d-flex align-items-center gap-3 p-3 rounded-2 mb-3 shadow-sm">
-                    <div class="text-white d-flex align-items-center justify-content-center rounded-circle" style="width:70px;height:70px;background:linear-gradient(135deg,var(--primary),var(--darkest));">⭐</div>
+                <div class="d-flex align-items-center gap-3 p-3 rounded-2 mb-3 shadow-sm" style="background:var(--white);border:2px solid var(--gold);">
+                    <div class="text-white d-flex align-items-center justify-content-center rounded-circle" style="width:70px;height:70px;background:linear-gradient(135deg,var(--black),var(--gray-dark));border:2px solid var(--gold);">⭐</div>
                     <div>
                         <h3 class="fw-bold mb-1 fs-2"><span class="counter" data-target="5" data-suffix="+">0</span></h3>
                         <p>Years of Experience</p>
                     </div>
                 </div>
-                <div class="stats-white d-flex align-items-center gap-3 p-3 rounded-2 shadow-sm">
-                    <div class="text-white d-flex align-items-center justify-content-center rounded-circle" style="width:70px;height:70px;background:linear-gradient(135deg,var(--primary),var(--darkest));">👥</div>
+                <div class="d-flex align-items-center gap-3 p-3 rounded-2 shadow-sm" style="background:var(--white);border:2px solid var(--gold);">
+                    <div class="text-white d-flex align-items-center justify-content-center rounded-circle" style="width:70px;height:70px;background:linear-gradient(135deg,var(--black),var(--gray-dark));border:2px solid var(--gold);">👥</div>
                     <div>
                         <h3 class="fw-bold mb-1 fs-2"><span class="counter" data-target="1000" data-suffix="+">0</span></h3>
                         <p>Students Reached</p>
@@ -514,16 +504,16 @@
                 </div>
             </div>
             <div class="col-md-6 text-center">
-                <div class="stats-white p-4 rounded-3 shadow-lg glow-pulse">
-                    <h3 class="fw-bold fs-3 mb-2" style="color:var(--primary);">🔥 Now it's YOUR time</h3>
+                <div class="p-4 rounded-3 shadow-lg glow-pulse" style="background:var(--black);border:2px solid var(--gold);color:var(--gold);">
+                    <h3 class="fw-bold fs-3 mb-2">🔥 Now it's YOUR time</h3>
                     <div class="row text-center">
                         <div class="col-6">
-                            <h4 class="fw-bold fs-2 mb-0" style="color:var(--primary);">₹<span class="counter" data-target="500000" data-suffix="+">0</span></h4>
-                            <p class="text-muted">Earned by Students</p>
+                            <h4 class="fw-bold fs-2 mb-0">₹<span class="counter" data-target="500000" data-suffix="+">0</span></h4>
+                            <p class="small opacity-75 mb-0">Earned by Students</p>
                         </div>
                         <div class="col-6">
-                            <h4 class="fw-bold fs-2 mb-0" style="color:var(--primary);"><span class="counter" data-target="100" data-suffix="+">0</span></h4>
-                            <p class="text-muted">Active Earners</p>
+                            <h4 class="fw-bold fs-2 mb-0"><span class="counter" data-target="100" data-suffix="+">0</span></h4>
+                            <p class="small opacity-75 mb-0">Active Earners</p>
                         </div>
                     </div>
                 </div>
@@ -535,15 +525,15 @@
 <!-- FAQ Section -->
 <section class="py-5" style="background: var(--white);">
     <div class="container">
-        <h2 class="text-center display-5 fw-bold mb-4" style="color:var(--primary);">Frequently Asked Questions</h2>
+        <h2 class="text-center display-5 fw-bold mb-4 section-title">Frequently Asked Questions</h2>
         <div class="row justify-content-center">
             <div class="col-lg-10">
                 <div class="accordion" id="faqAccordion">
-                    <div class="accordion-item glow-border"><h2 class="accordion-header"><button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq1">What kind of work will I be doing?</button></h2><div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion"><div class="accordion-body">Digital skills: Social Media Management, Content Creation, Affiliate Marketing, and more. 100% legitimate and skill-based.</div></div></div>
-                    <div class="accordion-item glow-border"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq2">Is this program legitimate & safe?</button></h2><div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Absolutely. We focus on real skills that are in high demand. 1000+ students are already earning through our system.</div></div></div>
-                    <div class="accordion-item glow-border"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq3">How much time daily?</button></h2><div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Just 1-2 hours daily. Flexible for students, job holders, and housewives.</div></div></div>
-                    <div class="accordion-item glow-border"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq4">When will I start earning?</button></h2><div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Most students start seeing results within the first month, depending on consistency.</div></div></div>
-                    <div class="accordion-item glow-border"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq5">Any prior experience needed?</button></h2><div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">No experience needed! We start from zero and guide you step-by-step.</div></div></div>
+                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq1">What kind of work will I be doing?</button></h2><div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion"><div class="accordion-body">Digital skills: Social Media Management, Content Creation, Affiliate Marketing, and more. 100% legitimate and skill-based.</div></div></div>
+                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq2">Is this program legitimate & safe?</button></h2><div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Absolutely. We focus on real skills that are in high demand. 1000+ students are already earning through our system.</div></div></div>
+                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq3">How much time daily?</button></h2><div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Just 1-2 hours daily. Flexible for students, job holders, and housewives.</div></div></div>
+                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq4">When will I start earning?</button></h2><div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Most students start seeing results within the first month, depending on consistency.</div></div></div>
+                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq5">Any prior experience needed?</button></h2><div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">No experience needed! We start from zero and guide you step-by-step.</div></div></div>
                 </div>
             </div>
         </div>
@@ -551,33 +541,33 @@
 </section>
 
 <!-- Final CTA -->
-<section class="py-5 text-white" style="background: linear-gradient(135deg,var(--primary),var(--darkest));">
+<section class="py-5 text-white" style="background: var(--black); border-top: 3px solid var(--gold);">
     <div class="container text-center">
-        <h2 class="display-4 fw-bold mb-3">Ready to Transform Your Life?</h2>
+        <h2 class="display-4 fw-bold mb-3" style="color:var(--gold);">Ready to Transform Your Life?</h2>
         <p class="fs-5 mb-4">Join thousands on their journey to financial independence</p>
-        <div class="card border-0 p-4 p-md-5 mb-4" style="background:var(--white);color:var(--darkest);">
-            <h3 class="h4 fw-bold mb-3" style="color:var(--primary);">📲 How to Start?</h3>
+        <div class="card border-0 p-4 p-md-5 mb-4" style="background:var(--white);color:var(--black);border:2px solid var(--gold);">
+            <h3 class="h4 fw-bold mb-3" style="color:var(--black);">📲 How to Start?</h3>
             <p class="fs-5 mb-3">Simply message me on WhatsApp:</p>
             <div class="row g-2 mb-3">
-                <div class="col-md-4"><div class="glow-border text-dark p-3 rounded" style="background:var(--lightest);"><strong>📝 Name:</strong> Full Name</div></div>
-                <div class="col-md-4"><div class="glow-border text-dark p-3 rounded" style="background:var(--lightest);"><strong>🎂 Age:</strong> Your Age</div></div>
-                <div class="col-md-4"><div class="glow-border text-dark p-3 rounded" style="background:var(--lightest);"><strong>💼 Profession:</strong> Current Status</div></div>
+                <div class="col-md-4"><div class="p-3 rounded" style="background:var(--gray-light);border:1px solid var(--gold);"><strong>📝 Name:</strong> Full Name</div></div>
+                <div class="col-md-4"><div class="p-3 rounded" style="background:var(--gray-light);border:1px solid var(--gold);"><strong>🎂 Age:</strong> Your Age</div></div>
+                <div class="col-md-4"><div class="p-3 rounded" style="background:var(--gray-light);border:1px solid var(--gold);"><strong>💼 Profession:</strong> Current Status</div></div>
             </div>
-            <p class="fs-6 fw-semibold mb-3" style="color:var(--primary);">📌 Save My Number: 8472092336</p>
-            <button class="wa-btn glow-pulse open-form" data-source="Final CTA" style="background:var(--primary);color:var(--white);border:1px solid var(--primary); justify-content: center;">
+            <p class="fs-6 fw-semibold mb-3" style="color:var(--black);">📌 Save My Number: <span class="gold-text">8472092336</span></p>
+            <button class="wa-btn glow-pulse open-form" data-source="Final CTA" style="justify-content: center;">
                 📲 Message on WhatsApp Now
             </button>
         </div>
-        <div class="card border-0 p-3 mb-3 glow-border" style="background:rgba(255,255,255,.15);">
-            <h4 class="h5 fw-bold mb-2">⏳ Within 24 hours:</h4>
+        <div class="card border-0 p-3 mb-3" style="background:rgba(255,215,0,.1);border:1px solid var(--gold);">
+            <h4 class="h5 fw-bold mb-2" style="color:var(--gold);">⏳ Within 24 hours:</h4>
             <div class="row text-white">
                 <div class="col-md-6"><div class="d-flex align-items-center gap-2 justify-content-center">📋 Complete Details</div></div>
                 <div class="col-md-6"><div class="d-flex align-items-center gap-2 justify-content-center">🗺 Clear Roadmap</div></div>
             </div>
         </div>
-        <div class="mt-4"><button class="btn btn-outline-light btn-sm" id="privacyBtn"><i data-lucide="shield-check" width="16"></i> Privacy Policy</button></div>
+        <div class="mt-4"><button class="btn btn-outline-warning btn-sm" id="privacyBtn" style="color:var(--gold);border-color:var(--gold);"><i data-lucide="shield-check" width="16"></i> Privacy Policy</button></div>
         <p class="fs-6 mb-2 mt-3">🌟 Empower with skills • 🌈 Support every vision • 🚀 Dreams to direction</p>
-        <p class="fs-4 fw-bold mb-1">❤️ With Strength & Sincerity, Umesh Dey</p>
+        <p class="fs-4 fw-bold mb-1" style="color:var(--gold);">❤️ With Strength & Sincerity, Umesh Dey</p>
     </div>
 </section>
 
@@ -656,15 +646,15 @@
         if(e.key==='Escape'){ closePPNew(); }
     });
 
-    // FORM POPUP LOGIC
+    // FORM POPUP LOGIC WITH GOOGLE SHEETS
     const formBackdrop = document.getElementById('formBackdrop');
     const formContainer = document.getElementById('formContainer');
     const mainForm = document.getElementById('mainForm');
     const sourceInfo = document.getElementById('sourceInfo');
     const closeFormBtn = document.getElementById('closeFormBtn');
     
-    // NOTE: Replace with your actual Google Script URL for form submissions
-    const SCRIPT_URL = "https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec";
+    // YOUR GOOGLE SCRIPT URL
+    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwJc9rgVuOGk7l3o7LwYhKFEgbY_gWSeMUpSQilvKGO_OTAf-8-C4BPM-YmOmhUWpuW/exec";
     const WA_NUMBER_INT = "918472092336";
 
     function openForm(source = 'site'){
@@ -692,7 +682,7 @@
         });
     });
 
-    // Form submission
+    // Form submission - Save to Google Sheets + WhatsApp
     mainForm.addEventListener('submit', (e) => {
         e.preventDefault();
         
@@ -706,16 +696,29 @@
             return;
         }
 
-        // Send to Google Sheets (optional - remove if not needed)
-        const fd = new FormData();
-        fd.append('name', name);
-        fd.append('age', age);
-        fd.append('gender', gender);
-        fd.append('profession', profession);
-        fd.append('source', sourceInfo.value || 'Website');
-        fd.append('timestamp', new Date().toISOString());
+        // Prepare data for Google Sheets
+        const formData = {
+            name: name,
+            age: age,
+            gender: gender,
+            profession: profession,
+            source: sourceInfo.value || 'Website',
+            timestamp: new Date().toISOString()
+        };
 
-        fetch(SCRIPT_URL, { method: 'POST', body: fd, mode: 'no-cors' }).catch(() => {});
+        // Send to Google Sheets
+        fetch(SCRIPT_URL, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData)
+        }).then(() => {
+            console.log('Data saved to Google Sheets');
+        }).catch((error) => {
+            console.error('Error saving to Google Sheets:', error);
+        });
 
         // Open WhatsApp with pre-filled message
         const msg = encodeURIComponent(`Hello Sir,\n\nI am interested in your program. Here are my details:\n\nName: ${name}\nAge: ${age}\nGender: ${gender}\nProfession: ${profession}\n\nPlease share next steps. Thank you!`);
@@ -730,7 +733,10 @@
             });
         }
         
+        // Open WhatsApp
         window.open(`https://wa.me/${WA_NUMBER_INT}?text=${msg}`, '_blank');
+        
+        // Close form
         closeForm();
     });
 
