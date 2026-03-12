@@ -31,10 +31,10 @@
         s.parentNode.insertBefore(t,s)}(window, document,'script',
         'https://connect.facebook.net/en_US/fbevents.js');
         
-        fbq('init', '774069688230032');
+        fbq('init', '935552185615019');
         fbq('track', 'PageView');
     </script>
-    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=774069688230032&ev=PageView&noscript=1"/></noscript>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=935552185615019&ev=PageView&noscript=1"/></noscript>
 
     <style>
         :root {
@@ -742,16 +742,6 @@
 
         // Open WhatsApp with pre-filled message
         const msg = encodeURIComponent(`Hello Sir,\n\nI am interested in your program. Here are my details:\n\nName: ${name}\nAge: ${age}\nGender: ${gender}\nProfession: ${profession}\n\nPlease share next steps. Thank you!`);
-        
-        // Track with Meta Pixel if available
-        if (typeof fbq !== 'undefined') {
-            fbq('track', 'Contact');
-            fbq('track', 'Lead', {
-                content_name: 'WhatsApp Form Submission',
-                content_category: 'Lead Generation',
-                content_source: sourceInfo.value
-            });
-        }
         
         // Open WhatsApp
         window.open(`https://wa.me/${WA_NUMBER_INT}?text=${msg}`, '_blank');
