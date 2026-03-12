@@ -274,6 +274,12 @@
                         </label>
                         <input id="inp_name" type="text" class="form-control" required placeholder="Your full name">
                     </div>
+                    <div class="col-12">
+                        <label class="form-label d-flex align-items-center gap-2 fw-bold">
+                            <i data-lucide="phone" style="width:16px"></i> Phone *
+                        </label>
+                        <input id="inp_phone" type="tel" class="form-control" required placeholder="10-digit number" maxlength="10">
+                    </div>
                     <div class="col-6">
                         <label class="form-label d-flex align-items-center gap-2 fw-bold">
                             <i data-lucide="calendar" style="width:16px"></i> Age *
@@ -707,43 +713,40 @@
         e.preventDefault();
         
         const name = document.getElementById('inp_name').value.trim();
+        const phone = document.getElementById('inp_phone').value.replace(/\D/g,'');
         const age = document.getElementById('inp_age').value;
         const gender = document.getElementById('inp_gender').value;
         const profession = document.getElementById('inp_profession').value;
 
-        if (!name || !age || !gender || !profession) {
+        if (!name || phone.length < 6 || !age || !gender || !profession) {
             alert('Please fill all fields correctly.');
             return;
         }
 
-        // Prepare data for Google Sheets
-        const formData = {
-            name: name,
-            age: age,
-            gender: gender,
-            profession: profession,
-            source: sourceInfo.value || 'Website',
-            timestamp: new Date().toISOString()
-        };
+        // Track Contact event
+        if (typeof fbq !== 'undefined') {
+            fbq('track', 'Contact');
+        }
 
-        // Send to Google Sheets
+        // Send to Google Sheets using FormData (like Pari Khan's code)
+        const fd = new FormData();
+        fd.append('name', name);
+        fd.append('phone', phone);
+        fd.append('age', age);
+        fd.append('gender', gender);
+        fd.append('profession', profession);
+        fd.append('source', sourceInfo.value || 'Website');
+        fd.append('timestamp', new Date().toISOString());
+
         fetch(SCRIPT_URL, {
             method: 'POST',
-            mode: 'no-cors',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(formData)
-        }).then(() => {
-            console.log('Data saved to Google Sheets');
-        }).catch((error) => {
-            console.error('Error saving to Google Sheets:', error);
-        });
+            body: fd,
+            mode: 'no-cors'
+        }).catch(() => {});
 
         // Open WhatsApp with pre-filled message
-        const msg = encodeURIComponent(`Hello Sir,\n\nI am interested in your program. Here are my details:\n\nName: ${name}\nAge: ${age}\nGender: ${gender}\nProfession: ${profession}\n\nPlease share next steps. Thank you!`);
+        const msg = encodeURIComponent(`Hello Sir,\n\nI am interested in your program. Here are my details:\n\nName: ${name}\nPhone: ${phone}\nAge: ${age}\nGender: ${gender}\nProfession: ${profession}\n\nPlease share next steps. Thank you!`);
         
-        // Open WhatsApp
         window.open(`https://wa.me/${WA_NUMBER_INT}?text=${msg}`, '_blank');
         
         // Close form
